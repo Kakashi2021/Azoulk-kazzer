@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading...</title>
+    <style>
+      /* Full-screen centering of loader */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f3f3f3; /* Background color */
+        font-family: Arial, sans-serif;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      /* Loader container style */
+      .loader-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      /* Circular loader */
+      .loader {
+        border: 8px solid #f3f3f3; /* Light background of the loader */
+        border-top: 8px solid #3498db; /* Blue color for spinning effect */
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 1.5s linear infinite;
+      }
+
+      /* Animation for rotating the loader */
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Styling for the "Please wait" message */
+      .loading-text {
+        margin-top: 15px;
+        font-size: 18px;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Loader Container -->
+    <div class="loader-wrapper">
+      <div class="loader"></div>
+      <div class="loading-text">Please wait...</div>
+    </div>
+
+    <script>
+      // Redirect after 10 seconds
+      setTimeout(function () {
+        window.location.href = "Resett.html"; // Replace with your target page
+      }, 10000);
+    </script>
+  </body>
+</html>
